@@ -1,76 +1,176 @@
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+
+:root{
+  /* Paleta antojable (oscuro + hambre) */
+  --bg: #0b0b0d;
+  --bg2: #121217;
+  --card: #16161d;
+  --text: #f2f2f3;
+  --muted: #b7b7b9;
+
+  /* “Hambre”: chile + dorado tortilla + verde salsa */
+  --accent: #ff3b2f;   /* chile rojo */
+  --accent2: #ffb703;  /* dorado tortilla */
+  --accent3: #43c59e;  /* verde salsa suave */
+
+  --border: rgba(255,255,255,0.12);
+  --shadow: 0 14px 40px rgba(0,0,0,0.45);
 }
+
+html, body { overflow-x: hidden; }
 
 .cuerpoPagina{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  overflow-x: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(900px 400px at 20% 0%, rgba(255,59,47,0.12), transparent 60%),
+              radial-gradient(900px 400px at 80% 10%, rgba(255,183,3,0.10), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg2));
+  color: var(--text);
 }
 
-/* Imágenes fluidas */
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+img{ max-width: 100%; height: auto; display: block; }
 
+/* =========================
+   TOPBAR
+   ========================= */
 .fondoLogo{
-  background-color: rgb(246,249,249,255);
+  background: rgba(10,10,12,0.55);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
 }
 
 .logoInicial{
-  /* Quitamos width fijo, Bootstrap container ya controla */
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
-/* HEADER */
+.brandWord{
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.brandSince{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.btnMini{
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.04);
+}
+
+.btnMini:hover{
+  border-color: rgba(255,255,255,0.22);
+}
+
+.btnMini--primary{
+  border-color: rgba(255,59,47,0.45);
+  background: rgba(255,59,47,0.10);
+}
+
+/* =========================
+   HERO
+   ========================= */
 .header{
   display: flex;
-  background: url("../Assets/imgs/back.jpeg");
-  min-height: 600px; /* antes height fijo */
-  justify-content: center;
+  min-height: 620px;
   align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+
+  background:
+    radial-gradient(900px 450px at 50% 10%, rgba(255,183,3,0.18), transparent 60%),
+    radial-gradient(900px 450px at 20% 80%, rgba(255,59,47,0.22), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url("../Assets/imgs/back.jpeg");
   background-size: cover;
   background-position: center;
-  padding: 40px 0;
 }
 
 .header-info{
-  text-align: center;
   width: 100%;
-  max-width: 700px; /* mantiene tu look */
+  max-width: 820px;
 }
 
 .marca{
-  font-size: 108px;
-  color: white;
+  font-size: 96px;
+  color: var(--text);
   line-height: 1;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.55);
 }
 
 .separador{
-  border-bottom: solid rgb(89,137,174,255);
-  width: 100%;
+  border-bottom: 2px solid rgba(255,183,3,0.55);
   max-width: 720px;
 }
 
-/* Botón */
-.boton-accion{
-  color: white;
-  font-size: 20px;
-  border: 2px solid rgb(89,137,174,255);
-  padding: 15px 35px;
-  background: transparent;
-  border-radius: 5px;
-  cursor: pointer;
+.heroSub{
+  color: rgba(255,255,255,0.86);
+  font-size: 18px;
 }
 
-/* SECCIÓN DISEÑO */
+.boton-accion{
+  color: var(--text);
+  font-size: 18px;
+  border: 2px solid rgba(255,183,3,0.55);
+  padding: 14px 28px;
+  background: transparent;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.boton-accion:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,183,3,0.85);
+  background: rgba(255,183,3,0.10);
+}
+
+.boton-accion--fill{
+  border-color: rgba(255,59,47,0.55);
+  background: linear-gradient(180deg, rgba(255,59,47,0.35), rgba(255,59,47,0.15));
+}
+
+.boton-accion--fill:hover{
+  border-color: rgba(255,59,47,0.85);
+  background: linear-gradient(180deg, rgba(255,59,47,0.45), rgba(255,59,47,0.20));
+}
+
+.quickInfo{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.quickPill{
+  font-size: 14px;
+  color: rgba(255,255,255,0.88);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+/* =========================
+   OVERVIEW
+   ========================= */
 .disenioSimple{
-  background-color: rgb(246,249,249,255);
-  padding: 60px 0;
+  padding: 70px 0;
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .contenedorDisenioSimple{
@@ -80,178 +180,244 @@ img{
   text-align: center;
 }
 
-h3, h2{
+h2, h3{
   font-size: 40px;
-  color: #383838;
+  color: var(--text);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .disenioParrafo{
-  color: rgb(154,154,154,255);
+  color: var(--muted);
+  max-width: 900px;
+  margin: 16px auto 0 auto;
 }
 
-/* SERVICIOS */
+/* =========================
+   SERVICIOS
+   ========================= */
 .contenedorServicios{
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
 .cajaServicios{
   text-align: center;
-  padding: 0 5px;
+  padding: 26px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-.cajaServicios img{
-  margin: 0 auto 10px auto;
+.iconFood{
+  font-size: 40px;
+  color: var(--accent2);
+  display: inline-block;
 }
 
 .cajaServicios h5{
-  color: rgb(52, 64, 86, 255);
+  color: var(--text);
   font-size: 20px;
-  margin: 15px 0;
+  margin: 10px 0 12px 0;
 }
 
 .cajaServicios span{
-  color: rgb(160,160,160,255);
+  color: var(--muted);
 }
 
-/* GALERÍA */
+/* =========================
+   SHOWCASE
+   ========================= */
 .contenedorShowCase{
-  background-color: #f6f9f9;
+  background: rgba(255,255,255,0.02);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .showCase{
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 .encabezadoShowCase{
   text-align: center;
-  margin-bottom: 90px;
-}
-
-.encabezadoShowCase h2{
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .encabezadoShowCase p{
-  color: #6A6A6A;
+  color: rgba(255,255,255,0.75);
 }
 
 .cajaGaleria img{
-  margin-bottom: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-/* CONTACTO */
-.stayWithUs{
-  background: url(../Assets/imgs/bg-stay.jpg);
-  background-size: cover;
-  background-position: center;
-  padding: 50px 0;
+/* =========================
+   INFO SECTION (horarios)
+   ========================= */
+.infoSection{
+  padding: 70px 0;
 }
 
-.contenedorStay{
-  padding: 50px 0;
+.infoCard{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
 }
 
-.encabezadoStay{
+.infoTitle{
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.infoList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.86);
+}
+
+.infoList li:last-child{ border-bottom: 0; }
+
+.infoList span{ color: var(--muted); }
+.infoList strong{ color: var(--accent2); }
+
+.infoNote{
+  margin: 14px 0 0 0;
+  color: rgba(255,255,255,0.72);
+}
+
+.textSoft{ color: var(--muted); }
+
+/* =========================
+   EVENTOS CTA (sin formulario)
+   ========================= */
+.eventosCTA{
+  padding: 90px 0;
   text-align: center;
-  margin-bottom: 40px;
+  background:
+    radial-gradient(900px 450px at 15% 25%, rgba(255,59,47,0.22), transparent 60%),
+    radial-gradient(900px 450px at 85% 65%, rgba(255,183,3,0.18), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.9));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-.encabezadoStay h2{
-  margin-bottom: 10px;
-  color: white;
+.eventosTitle{
+  font-size: 42px;
+  margin-bottom: 14px;
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.encabezadoStay span{
-  color: #8e8e8e;
+.eventosText{
+  max-width: 760px;
+  margin: 0 auto 22px auto;
+  color: rgba(255,255,255,0.82);
+  font-size: 18px;
 }
 
-.contacto{
-  max-width: 600px;
-  margin: auto;
+.eventosHighlight{
+  display: inline-block;
+  margin-bottom: 28px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.16);
 }
 
-.input{
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: transparent;
-  border: 1px solid #8e8e8e;
-  border-radius: 3px;
-  color: white;
+.botonEventos{
+  font-size: 20px;
+  padding: 16px 38px;
+  border-radius: 999px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
 }
 
-.input::placeholder{
-  color: #bdbdbd;
+/* =========================
+   FOOTER
+   ========================= */
+.footerMain{
+  background: rgba(10,10,12,0.85);
+  border-top: 1px solid var(--border);
 }
 
-/* (Bootstrap agrega fondos/estilos a form-control, lo neutralizamos) */
-.form-control{
-  background-color: transparent !important;
-  border: 1px solid #8e8e8e !important;
-  color: white !important;
-  box-shadow: none !important;
+.footerBrand{
+  font-size: 16px;
+  color: var(--text);
 }
 
-.form-control:focus{
-  border-color: rgb(89,137,174,255) !important;
-  box-shadow: none !important;
+.footerMiniTitle{
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
 }
 
-/* CHECK */
-.check{
-  color: white;
+.socialLink{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  text-decoration: none;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
 }
 
-/* FOOTER */
-.footer{
-  margin: 10px auto;
+.socialLink:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,59,47,0.55);
+  background: rgba(255,59,47,0.12);
+}
+
+.footerBottom{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+  margin-top: 18px;
 }
 
 /* =========================
    RESPONSIVE
    ========================= */
-
-/* Tablets */
 @media (max-width: 992px){
-  .marca{
-    font-size: 72px;
-  }
-  .header{
-    min-height: 520px;
-  }
-  .showCase{
-    padding: 70px 0;
-  }
-  .encabezadoShowCase{
-    margin-bottom: 55px;
-  }
+  .marca{ font-size: 72px; }
+  .header{ min-height: 540px; padding: 60px 0; }
+  h2, h3{ font-size: 32px; }
+
+  .eventosTitle{ font-size: 34px; }
+  .eventosText{ font-size: 17px; }
 }
 
-/* Móvil */
 @media (max-width: 576px){
-  .marca{
-    font-size: 48px;
-  }
+  .marca{ font-size: 48px; }
+  .heroSub{ font-size: 16px; }
+  .boton-accion{ width: 100%; }
+  .quickInfo{ justify-content: center; }
+  .disenioSimple{ padding: 50px 0; }
+  .contenedorServicios{ padding: 50px 0; }
+  .showCase{ padding: 60px 0; }
+  .infoSection{ padding: 50px 0; }
 
-  h3, h2{
-    font-size: 28px;
-  }
-
-  .disenioSimple{
-    padding: 40px 0;
-  }
-
-  .showCase{
-    padding: 45px 0;
-  }
-
-  .input{
-    padding: 16px;
-  }
-
-  .boton-accion{
-    font-size: 18px;
-    padding: 12px 26px;
+  .eventosCTA{ padding: 70px 0; }
+  .eventosTitle{ font-size: 28px; }
+  .eventosText{ font-size: 16px; }
+  .botonEventos{
+    width: 100%;
+    padding: 16px 24px;
   }
 }

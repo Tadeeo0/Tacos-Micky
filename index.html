@@ -1,181 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proyecto 1 (Strict)</title>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tacos de Canasta Micky | Desde 2012</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="CSS/Estilos.css">
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="CSS/Estilos.css" />
 
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/29fba4e091.js" crossorigin="anonymous"></script>
-</head>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/29fba4e091.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body class="cuerpoPagina">
-
-  <!-- LOGO -->
-  <div class="fondoLogo">
-    <div class="container">
-      <div class="logoInicial d-flex align-items-center justify-content-center justify-content-md-start flex-wrap py-2">
-        <i class="fa-solid fa-cube fa-3x" style="color: #15a4fa;">&nbsp;&nbsp;</i>
-        <i class="fa-solid fa-s fa-2x" style="color: #15A4FA;"></i>
-        <i class="fa-solid fa-t fa-2x" style="color: #15A4Fa;"></i>
-        <i class="fa-solid fa-r fa-2x" style="color: #15A4Fa;"></i>
-        <i class="fa-solid fa-i fa-2x" style="color: #15A4Fa;"></i>
-        <i class="fa-solid fa-c fa-2x" style="color: #15A4Fa;"></i>
-        <i class="fa-solid fa-t fa-2x" style="color: #15A4Fa;"></i>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 header-info text-center">
-          <h2 class="marca">Tacos Micky</h2>
-          <div class="separador mx-auto my-3"></div>
-          <p class="text-white mb-4">STRICT es un tema responsivo con un diseño limpio y minimalista.</p>
-          <button class="boton-accion">Llamar a Accion</button>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- DISEÑO SIMPLE -->
-  <section class="disenioSimple">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 contenedorDisenioSimple text-center">
-          <h3>Diseño Simple y Puro</h3>
-          <p class="disenioParrafo">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum dolores cum inventore
-            autem earum nam modi voluptates molestiae quibusdam, aliquam impedit explicabo natus hic
-            consequatur veritatis? Facilis pariatur nobis eligendi reprehenderit, quas veritatis
-            necessitatibus esse repellat est enim atque iure dolor quasi ratione itaque fugiat!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICIOS -->
-  <section class="contenedorServicios">
-    <div class="container">
-      <div class="row g-4 justify-content-center">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="cajaServicios text-center h-100">
-            <img class="img-fluid mx-auto" src="Assets/imgs/icon-movil.jpg" alt="">
-            <h5>Diseño Limpio Y Minimalista</h5>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, qui.</span>
+  <body class="cuerpoPagina">
+    <!-- TOPBAR -->
+    <div class="fondoLogo">
+      <div class="container">
+        <div
+          class="logoInicial d-flex align-items-center justify-content-between flex-wrap py-2 gap-2"
+        >
+          <div class="d-flex align-items-center flex-wrap">
+            <i
+              class="fa-solid fa-basket-shopping fa-2x me-2"
+              style="color: var(--accent)"
+            ></i>
+            <span class="brandWord">Tacos de Canasta Micky</span>
+            <span class="brandSince ms-2">Desde <strong>2012</strong></span>
           </div>
-        </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="cajaServicios text-center h-100">
-            <img class="img-fluid mx-auto" src="Assets/imgs/icon-enviar.jpg" alt="">
-            <h5>Diseño Limpio Y Minimalista</h5>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, qui.</span>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="cajaServicios text-center h-100">
-            <img class="img-fluid mx-auto" src="Assets/imgs/icon-voz.jpg" alt="">
-            <h5>Diseño Limpio Y Minimalista</h5>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, qui.</span>
+          <div class="topActions d-flex align-items-center gap-2">
+            <a class="btnMini" href="#horarios"
+              ><i class="fa-regular fa-clock me-1"></i>Lorem</a
+            >
+            <a class="btnMini btnMini--primary" href="#eventos"
+              ><i class="fa-solid fa-truck me-1"></i>Lorem</a
+            >
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- SHOWCASE -->
-  <section class="contenedorShowCase">
-    <div class="container showCase">
+    <!-- HERO -->
+    <header class="header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9 header-info text-center">
+            <h1 class="marca">Tacos de Canasta</h1>
+            <div class="separador mx-auto my-3"></div>
 
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8 text-center encabezadoShowCase">
-          <h2>Muestra tu Trabajo como un Profesional</h2>
-          <p>Contactame si te gusta mi Trabajo</p>
-        </div>
-      </div>
+            <p class="heroSub mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="d-block mt-1"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                modi.</span
+              >
+            </p>
 
-      <div class="galeriadeImagenes">
-        <div class="row g-3">
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-3.jpg" alt=""></div></div>
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-2.jpg" alt=""></div></div>
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-5.jpg" alt=""></div></div>
+            <div
+              class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+            >
+              <a
+                class="boton-accion boton-accion--fill"
+                href="https://wa.me/5210000000000"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-whatsapp me-2"></i>Contactanos!
+              </a>
+              <a class="boton-accion" href="#menu">
+                <i class="fa-solid fa-pepper-hot me-2"></i>Lorem ipsum
+              </a>
+            </div>
 
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-1.jpg" alt=""></div></div>
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-4.jpg" alt=""></div></div>
-          <div class="col-12 col-md-4"><div class="cajaGaleria"><img class="img-fluid w-100" src="Assets/imgs/show-6.jpg" alt=""></div></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="stayWithUs">
-    <div class="container contenedorStay">
-
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-
-          <div class="encabezadoStay text-center">
-            <h2>Ponte en Contacto</h2>
-            <span>Lorem ipsum dolor sit amet.</span>
-          </div>
-
-          <form action="" class="contacto">
-            <input type="text" name="name" id="name" placeholder="Nombre Completo" class="input form-control">
-            <input type="email" name="email" id="email" placeholder="Correo Electronico" class="input form-control">
-            <textarea name="message" id="message" cols="30" rows="6" placeholder="Escriba su mensaje." class="input form-control"></textarea>
-
-            <div class="acciones d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
-              <div class="check form-check">
-                <input class="form-check-input" type="checkbox" id="subscribe">
-                <label class="form-check-label" for="subscribe">Subscribirse a noticias</label>
+            <div class="quickInfo mt-4">
+              <div class="quickPill">
+                <i class="fa-solid fa-location-dot me-2"></i>Lorem
               </div>
-
-              <div class="btnEnviar">
-                <button class="boton-accion" type="submit">Enviar</button>
+              <div class="quickPill">
+                <i class="fa-solid fa-basket-shopping me-2"></i>Lorem ipsum dolor
+              </div>
+              <div class="quickPill">
+                <i class="fa-solid fa-fire-flame-curved me-2"></i>Lorem ipsum
               </div>
             </div>
-          </form>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer py-3">
-    <div class="container">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-md-6 text-center text-md-start">
-          <span>Copyright 2023 STRICT</span>
-        </div>
-
-        <div class="col-12 col-md-6 text-center text-md-end">
-          <div class="redesSociales d-inline-flex align-items-center gap-3">
-            <i class="fa-brands fa-facebook-f fa-spin fa-2x" style="color: #4468a7;"></i>
-            <i class="fa-brands fa-square-x-twitter fa-3x" style="color: #15a4fa;"></i>
-            <i class="fa-brands fa-square-instagram fa-3x" style="color: #15a4fa;"></i>
-            <i class="fa-brands fa-linkedin fa-3x" style="color: #15a4fa;"></i>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </header>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- OVERVIEW / HISTORIA -->
+    <section class="disenioSimple" id="menu">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 contenedorDisenioSimple text-center">
+            <h2>Tradición que se antoja</h2>
+            <p class="disenioParrafo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+              aspernatur, sit minima officiis culpa.
+              <strong>2012</strong>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+              dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eius, provident.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES -->
+    <section class="contenedorServicios">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="cajaServicios text-center h-100">
+              <i class="fa-solid fa-seedling iconFood mb-2"></i>
+              <h5>Lorem, ipsum.</h5>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+                veritatis. Lorem ipsum dolor sit amet.
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="cajaServicios text-center h-100">
+              <i class="fa-solid fa-droplet iconFood mb-2"></i>
+              <h5>Lorem, ipsum dolor.</h5>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores, necessitatibus.
+              </span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="cajaServicios text-center h-100">
+              <i class="fa-solid fa-bag-shopping iconFood mb-2"></i>
+              <h5>Lorem, ipsum dolor.</h5>
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                quia, recusandae atque.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="contenedorShowCase">
+      <div class="container showCase">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8 text-center encabezadoShowCase">
+            <h2>Así se ve el antojo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
+        <div class="galeriadeImagenes">
+          <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-3.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-2.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-5.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-1.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-4.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="cajaGaleria">
+                <img class="img-fluid w-100" src="Assets/imgs/show-6.jpg" alt="Tacos de canasta" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIOS + UBICACIÓN -->
+    <section class="infoSection" id="horarios">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-lg-5">
+            <div class="infoCard h-100">
+              <h3 class="infoTitle">
+                <i class="fa-regular fa-clock me-2"></i>Horarios
+              </h3>
+              <ul class="infoList">
+                <li>
+                  <span>Lorem ipsum</span>
+                  <strong>Lorem ipsum</strong>
+                </li>
+                <li>
+                  <span>Lorem ipsum</span>
+                  <strong>Lorem ipsum</strong>
+                </li>
+                <li>
+                  <span>Lorem ipsum</span>
+                  <strong>Lorem ipsum</strong>
+                </li>
+              </ul>
+              <p class="infoNote">Lorem ipsum dolor sit amet.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5">
+            <div class="infoCard h-100">
+              <h3 class="infoTitle">
+                <i class="fa-solid fa-location-dot me-2"></i>¿Dónde estamos?
+              </h3>
+              <p class="mb-2">
+                📍 <strong>Guadalajara, Jal.</strong> (pon aquí colonia o referencia)
+              </p>
+              <p class="mb-0 textSoft">
+                Entregas a oficinas y puntos cercanos (según zona).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="eventosCTA" id="eventos">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-9 text-center">
+            <h2 class="eventosTitle">Eventos y pedidos grandes</h2>
+            <p class="eventosText">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <span class="d-block mt-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+                sequi.
+              </span>
+            </p>
+
+            <div class="eventosHighlight">
+              Lorem • Ipsum • Dolor • Sit • Amet
+            </div>
+
+            <a
+              class="boton-accion boton-accion--fill botonEventos"
+              href="https://wa.me/5210000000000"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-brands fa-whatsapp me-2"></i>
+              Contactanos!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footerMain py-4">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <div class="footerBrand">
+              <i class="fa-solid fa-basket-shopping me-2" style="color: var(--accent)"></i>
+              <strong>Tacos de Canasta Micky</strong>
+            </div>
+            <div class="textSoft">Desde 2012 • Guadalajara</div>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <div class="footerMiniTitle">Horarios</div>
+            <div class="textSoft">Lorem ipsum dolor sit amet</div>
+            <div class="textSoft">Lorem ipsum</div>
+          </div>
+
+          <div class="col-12 col-md-4 text-center text-md-end">
+            <div class="footerMiniTitle">Síguenos</div>
+            <div class="redesSociales d-inline-flex align-items-center gap-3 mt-2">
+              <a class="socialLink" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="socialLink" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a class="socialLink" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a class="socialLink" href="https://wa.me/5210000000000" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footerBottom text-center mt-4">
+          <span class="textSoft">© 2026 Tacos de Canasta Micky. Lorem ipsum dolor sit.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
