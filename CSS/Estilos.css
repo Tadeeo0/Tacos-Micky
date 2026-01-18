@@ -1,208 +1,257 @@
 h1, h2, h3, h4, h5, h6 {
-
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
 }
 
 .cuerpoPagina{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
 
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+/* Imágenes fluidas */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .fondoLogo{
-    
-    background-color: rgb(246,249,249,255);
+  background-color: rgb(246,249,249,255);
 }
 
 .logoInicial{
-
-    max-width: 1100px;
-    margin: auto;
-    padding: 10px 0px;
-    display: block;
+  /* Quitamos width fijo, Bootstrap container ya controla */
+  padding: 10px 0px;
 }
 
+/* HEADER */
 .header{
-    display: flex;
-    background: url("../Assets/imgs/back.jpeg");
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
+  display: flex;
+  background: url("../Assets/imgs/back.jpeg");
+  min-height: 600px; /* antes height fijo */
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
 }
+
 .header-info{
-    text-align: center;
-    width: 700px;
+  text-align: center;
+  width: 100%;
+  max-width: 700px; /* mantiene tu look */
 }
 
 .marca{
-    font-size: 108px;
-    color: white;
+  font-size: 108px;
+  color: white;
+  line-height: 1;
 }
 
 .separador{
-    border-bottom: solid rgb(89,137,174,255);
+  border-bottom: solid rgb(89,137,174,255);
+  width: 100%;
+  max-width: 720px;
 }
 
+/* Botón */
 .boton-accion{
-    color: white;
-    font-size: 20px;
-    border: 2px solid rgb(89,137,174,255) ;
-    padding: 15px 35px;
-    background: transparent;
-    border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  border: 2px solid rgb(89,137,174,255);
+  padding: 15px 35px;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+/* SECCIÓN DISEÑO */
 .disenioSimple{
-    background-color: rgb(246,249,249,255);
-    padding: 60px;
+  background-color: rgb(246,249,249,255);
+  padding: 60px 0;
 }
 
 .contenedorDisenioSimple{
-    width: 1100px;
-    margin: auto;
-    text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
 h3, h2{
-    font-size: 40px;
-    color: #383838;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: #383838;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .disenioParrafo{
-    color: rgb(154,154,154,255);
+  color: rgb(154,154,154,255);
 }
 
+/* SERVICIOS */
 .contenedorServicios{
-    width: 1100px;
-    padding: 60px;
-    margin: auto;
-    display: flex;
+  padding: 60px 0;
 }
 
 .cajaServicios{
-    width: 33.33%;
-    margin: auto;
-    text-align: center;
-    padding: 0 5px;
-    
+  text-align: center;
+  padding: 0 5px;
 }
 
 .cajaServicios img{
-    margin-bottom: 10px;
+  margin: 0 auto 10px auto;
 }
 
 .cajaServicios h5{
-    color: rgb(52, 64, 86, 255);
-    font-size: 20px;
-    margin-bottom: 15px;
+  color: rgb(52, 64, 86, 255);
+  font-size: 20px;
+  margin: 15px 0;
 }
 
 .cajaServicios span{
-    color: rgb(160,160,160,255);
-
+  color: rgb(160,160,160,255);
 }
 
-/* Agregar margen en todas las direcciones alrededor de las imágenes en la galería */
-.cajaGaleria img {
-    margin-bottom: 10px;
-}
-
-
+/* GALERÍA */
 .contenedorShowCase{
-    background-color: #f6f9f9;
+  background-color: #f6f9f9;
 }
 
 .showCase{
-    padding: 100px;
-    width: 1100px;
-    margin: auto;
-    
+  padding: 100px 0;
 }
 
 .encabezadoShowCase{
-    text-align: center;
-    margin-bottom: 90px;
+  text-align: center;
+  margin-bottom: 90px;
 }
 
 .encabezadoShowCase h2{
-    
-    margin-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 .encabezadoShowCase p{
-    color: #6A6A6A;
+  color: #6A6A6A;
 }
 
-.cajaGaleria{
- 
-    width: 33.3%;
-
+.cajaGaleria img{
+  margin-bottom: 10px;
 }
 
-.fila{
-    display: flex;
+/* CONTACTO */
+.stayWithUs{
+  background: url(../Assets/imgs/bg-stay.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
 }
 
 .contenedorStay{
-    padding: 50px 0;
-    width: 1100px;
-    margin: auto;
-}
-
-.stayWithUs{
-    background: url(../Assets/imgs/bg-stay.jpg);
-    background-size: cover;
+  padding: 50px 0;
 }
 
 .encabezadoStay{
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .encabezadoStay h2{
-    margin-bottom: 10px;
-    color: white;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .encabezadoStay span{
-    color: #8e8e8e;
+  color: #8e8e8e;
 }
 
 .contacto{
-    max-width: 600px;
-    margin: auto;
+  max-width: 600px;
+  margin: auto;
 }
 
 .input{
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: 1px solid #8e8e8e;
-    border-radius: 3px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid #8e8e8e;
+  border-radius: 3px;
+  color: white;
 }
 
-.acciones{
-    display: flex;
-    justify-content: space-between;
-    max-width: 600px;
-    margin: auto;
+.input::placeholder{
+  color: #bdbdbd;
 }
 
+/* (Bootstrap agrega fondos/estilos a form-control, lo neutralizamos) */
+.form-control{
+  background-color: transparent !important;
+  border: 1px solid #8e8e8e !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.form-control:focus{
+  border-color: rgb(89,137,174,255) !important;
+  box-shadow: none !important;
+}
+
+/* CHECK */
 .check{
-    color: white;
+  color: white;
 }
 
+/* FOOTER */
 .footer{
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px auto;
+  margin: 10px auto;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablets */
+@media (max-width: 992px){
+  .marca{
+    font-size: 72px;
+  }
+  .header{
+    min-height: 520px;
+  }
+  .showCase{
+    padding: 70px 0;
+  }
+  .encabezadoShowCase{
+    margin-bottom: 55px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 576px){
+  .marca{
+    font-size: 48px;
+  }
+
+  h3, h2{
+    font-size: 28px;
+  }
+
+  .disenioSimple{
+    padding: 40px 0;
+  }
+
+  .showCase{
+    padding: 45px 0;
+  }
+
+  .input{
+    padding: 16px;
+  }
+
+  .boton-accion{
+    font-size: 18px;
+    padding: 12px 26px;
+  }
 }
